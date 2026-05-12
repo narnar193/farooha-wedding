@@ -234,7 +234,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-[#6F6187]">
-                    September 9, 2026
+                    September 4, 2026
                   </p>
                 </div>
 
@@ -402,12 +402,156 @@ export default function Home() {
   rotate-[-4deg]
   shadow-2xl mb-6"
 />
+<motion.img
+  whileHover={{ scale: 1.03, rotate: 0 }}
+  src="/images/photo10.jpg"
+  className="w-full rounded-[30px]
+  rotate-[4deg]
+  shadow-2xl mb-6"
+/>
 </div>
 
  
             </div>
 
           </section>
+          {/* GIFT REGISTRY */}
+<section className="relative z-10 py-32 px-6">
+
+  <div
+    className="max-w-5xl mx-auto
+    bg-white/30
+    border border-white/40
+    backdrop-blur-md
+    rounded-[50px]
+    p-12 shadow-xl
+    relative overflow-hidden"
+  >
+
+    {/* SOFT DECOR CIRCLES */}
+    <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#F8C8DC]/40 rounded-full blur-3xl" />
+
+    <div className="absolute bottom-0 right-0 w-60 h-60 bg-[#BFD7ED]/40 rounded-full blur-3xl" />
+
+    {/* CONTENT */}
+    <div className="relative z-10 text-center">
+
+      <h2
+        className="text-6xl mb-10 text-[#9D84C2]"
+        style={{
+          fontFamily: "cursive",
+        }}
+      >
+        Gift Registry
+      </h2>
+
+      <p className="text-[#6F6187] text-2xl leading-relaxed max-w-3xl mx-auto">
+        We’re so grateful to celebrate with you.
+        If you'd like to gift us something special,
+        we've created a registry to make it easier to choose.
+      </p>
+
+     
+      <motion.a
+  href="https://docs.google.com/spreadsheets/d/1j8zAPhhqxMNLvoulmbSkOj47CWkpftykRVXtJXhUrU0/edit?usp=sharing"
+  target="_blank"
+  whileHover={{
+    scale: 1.08,
+    rotate: -2,
+  }}
+  whileTap={{ scale: 0.95 }}
+  className="inline-flex flex-col items-center
+  justify-center mt-14"
+>
+
+  {/* GIFT BOX */}
+  <div className="relative">
+
+    {/* BOX */}
+    <div
+      className="w-32 h-32 rounded-[25px]
+      bg-[#F8C8DC]
+      shadow-2xl relative"
+    >
+
+      {/* RIBBON VERTICAL */}
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-6 h-full bg-[#B497D6]" />
+
+      {/* RIBBON HORIZONTAL */}
+      <div className="absolute top-1/2 left-0 -translate-y-1/2 h-6 w-full bg-[#B497D6]" />
+
+      {/* BOW */}
+      <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-5xl">
+        🎀
+      </div>
+
+    </div>
+
+  </div>
+
+  {/* TEXT */}
+  <p className="mt-6 text-[#8E7BAF] text-xl font-semibold">
+    Open Gift Registry
+  </p>
+
+</motion.a>
+
+    </div>
+
+  </div>
+
+</section>
+        
+
+
+  <div className="max-w-5xl mx-auto
+  bg-[#F6F1E8]/80
+  border border-[#D9C7A3]
+  rounded-[50px]
+  p-12 shadow-xl relative overflow-hidden">
+
+    {/* DECOR */}
+    <div className="absolute top-10 right-10 text-[100px] opacity-10">
+      ✨
+    </div>
+
+    <div className="text-center">
+
+      <h2
+        className="text-6xl mb-10 text-[#8A7B3D]"
+        style={{
+          fontFamily: "cursive",
+        }}
+      >
+        Gift Registry
+      </h2>
+
+      <p className="text-[#8A7B3D] text-2xl leading-relaxed max-w-3xl mx-auto">
+        We’re so grateful to celebrate with you.
+        If you'd like to gift us something special,
+        we've created a registry to make it easier to choose.
+      </p>
+
+      <a
+        href="https://docs.google.com/spreadsheets/d/1j8zAPhhqxMNLvoulmbSkOj47CWkpftykRVXtJXhUrU0/edit?usp=sharing"
+        target="_blank"
+        className="inline-block mt-12
+        px-10 py-5
+        rounded-full
+        bg-[#B7A56A]
+        text-white
+        text-lg
+        shadow-lg
+        hover:scale-105 transition"
+      >
+        Open Registry ✨
+      </a>
+
+    </div>
+
+  </div>
+
+
 
           {/* RSVP */}
           <section className="relative z-10 py-32 px-6">
