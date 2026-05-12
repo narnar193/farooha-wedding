@@ -173,7 +173,7 @@ export default function Home() {
             className="mt-10 text-[#6F6187]
             text-xl tracking-wide"
           >
-            September 9, 2026 &nbsp;&nbsp; | &nbsp;&nbsp; 3:00 PM
+            September 4, 2026 &nbsp;&nbsp; | &nbsp;&nbsp; 3:00 PM
           </motion.p>
 
           <motion.button
