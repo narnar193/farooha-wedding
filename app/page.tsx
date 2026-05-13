@@ -504,53 +504,8 @@ export default function Home() {
         
 
 
-  <div className="max-w-5xl mx-auto
-  bg-[#F6F1E8]/80
-  border border-[#D9C7A3]
-  rounded-[50px]
-  p-12 shadow-xl relative overflow-hidden">
-
-    {/* DECOR */}
-    <div className="absolute top-10 right-10 text-[100px] opacity-10">
-      ✨
-    </div>
-
-    <div className="text-center">
-
-      <h2
-        className="text-6xl mb-10 text-[#8A7B3D]"
-        style={{
-          fontFamily: "cursive",
-        }}
-      >
-        Gift Registry
-      </h2>
-
-      <p className="text-[#8A7B3D] text-2xl leading-relaxed max-w-3xl mx-auto">
-        We’re so grateful to celebrate with you.
-        If you'd like to gift us something special,
-        we've created a registry to make it easier to choose.
-      </p>
-
-      <a
-        href="https://docs.google.com/spreadsheets/d/1j8zAPhhqxMNLvoulmbSkOj47CWkpftykRVXtJXhUrU0/edit?usp=sharing"
-        target="_blank"
-        className="inline-block mt-12
-        px-10 py-5
-        rounded-full
-        bg-[#B7A56A]
-        text-white
-        text-lg
-        shadow-lg
-        hover:scale-105 transition"
-      >
-        Open Registry ✨
-      </a>
-
-    </div>
-
-  </div>
-
+  
+  
 
 
           {/* RSVP */}
