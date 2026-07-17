@@ -301,7 +301,7 @@ shadow-lg
 
             <div className="max-w-5xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
-              <h2 className="text-5xl font-bold text-center mb-16 text-[#1F3A2E] " style={{
+              <h2 className="text-5xl font-bold text-center mb-16 text-[#cc7c73] " style={{
         fontFamily: "'Great Vibes', cursive",
       }}>
                 Wedding Details 
@@ -375,7 +375,7 @@ shadow-lg
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#1F3A2E]">
+                  <h3 className="text-5xl font-black text-[#8499a9]">
                     {timeLeft.days}
                   </h3>
 
@@ -385,7 +385,7 @@ shadow-lg
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#1F3A2E]">
+                  <h3 className="text-5xl font-black text-[#8e9548]">
                     {timeLeft.hours}
                   </h3>
 
@@ -395,7 +395,7 @@ shadow-lg
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#1F3A2E]">
+                  <h3 className="text-5xl font-black text-[#8e9548]">
                     {timeLeft.minutes}
                   </h3>
 
@@ -405,7 +405,7 @@ shadow-lg
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#1F3A2E]">
+                  <h3 className="text-5xl font-black text-[#8499a9]">
                     {timeLeft.seconds}
                   </h3>
 
@@ -425,7 +425,7 @@ shadow-lg
          
 
          
-          {/* GIFT REGISTRY */}
+          {/* dress code */}
 <section className="relative z-10 py-32 px-6">
 
   <div
@@ -478,7 +478,7 @@ shadow-lg
 
             <div className="max-w-3xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
-              <h2 className="text-5xl font-bold text-center mb-12 text-[#1F3A2E]"style={{
+              <h2 className="text-5xl font-bold text-center mb-12 text-[#cc7c73]"style={{
         fontFamily: "'Great Vibes', cursive",
       }}>
         Help Us Relive The Magic
