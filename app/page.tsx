@@ -395,7 +395,7 @@ shadow-lg
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#8e9548]">
+                  <h3 className="text-5xl font-black text-[#cc7c73]">
                     {timeLeft.minutes}
                   </h3>
 
@@ -405,7 +405,7 @@ shadow-lg
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#8499a9]">
+                  <h3 className="text-5xl font-black text-[#d5c7d6]">
                     {timeLeft.seconds}
                   </h3>
 
