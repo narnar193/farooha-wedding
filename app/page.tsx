@@ -301,7 +301,7 @@ shadow-lg
 
             <div className="max-w-5xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
-              <h2 className="text-5xl font-bold text-center mb-16 text-[#cc7c73] " style={{
+              <h2 className="text-5xl font-bold text-center mb-16 text-[#c18c86] " style={{
         fontFamily: "'Great Vibes', cursive",
       }}>
                 Wedding Details 
