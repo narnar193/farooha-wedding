@@ -438,79 +438,39 @@ shadow-lg
     relative overflow-hidden"
   >
 
-    {/* SOFT DECOR CIRCLES */}
-    <div className="absolute -top-20 -left-20 w-60 h-60 bg-[#F8C8DC]/40 rounded-full blur-3xl" />
-
-    <div className="absolute bottom-0 right-0 w-60 h-60 bg-[#BFD7ED]/40 rounded-full blur-3xl" />
 
     {/* CONTENT */}
     <div className="relative z-10 text-center">
 
       <h2
-        className="text-6xl mb-10 text-[#9D84C2]"
-        style={{
-          fontFamily: "cursive",
-        }}
+        className="text-6xl mb-10 text-[#1F3A2E]"
+       style={{
+        fontFamily: "'Great Vibes', cursive",
+      }}
       >
-        Gift Registry
+       Dress Code
       </h2>
+<div className="mt-14 flex flex-col md:flex-row items-center justify-center gap-8">
 
-      <p className="text-[#6F6187] text-2xl leading-relaxed max-w-3xl mx-auto">
-        We’re so grateful to celebrate with you.
-        If you'd like to gift us something special,
-        we've created a registry to make it easier to choose.
-      </p>
+  <motion.img
+    whileHover={{ scale: 1.05 }}
+    src="/images/girl dress code.png"
+    alt="Ladies Dress Code"
+    className="w-[420px] rounded-3xl shadow-xl"
+  />
 
+  <motion.img
+    whileHover={{ scale: 1.05 }}
+    src="/images/boy dress code.png"
+    alt="Gentlemen Dress Code"
+    className="w-[420px] rounded-3xl shadow-xl"
+  />
+
+</div>
      
-      <motion.a
-  href="https://docs.google.com/spreadsheets/d/1j8zAPhhqxMNLvoulmbSkOj47CWkpftykRVXtJXhUrU0/edit?usp=sharing"
-  target="_blank"
-  whileHover={{
-    scale: 1.08,
-    rotate: -2,
-  }}
-  whileTap={{ scale: 0.95 }}
-  className="inline-flex flex-col items-center
-  justify-center mt-14"
->
-
-  {/* GIFT BOX */}
-  <div className="relative">
-
-    {/* BOX */}
-    <div
-      className="w-32 h-32 rounded-[25px]
-      bg-[#F8C8DC]
-      shadow-2xl relative"
-    >
-
-      {/* RIBBON VERTICAL */}
-      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-6 h-full bg-[#B497D6]" />
-
-      {/* RIBBON HORIZONTAL */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 h-6 w-full bg-[#B497D6]" />
-
-      {/* BOW */}
-      <div className="absolute -top-5 left-1/2 -translate-x-1/2 text-5xl">
-        🎀
-      </div>
-
-    </div>
-
-  </div>
-
-  {/* TEXT */}
-  <p className="mt-6 text-[#8E7BAF] text-xl font-semibold">
-    Open Gift Registry
-  </p>
-
-</motion.a>
-
-    </div>
-
-  </div>
-
-</section>
+   </div>
+   </div>
+   </section>
         
 
 
@@ -523,8 +483,10 @@ shadow-lg
 
             <div className="max-w-3xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
-              <h2 className="text-5xl font-bold text-center mb-12 text-[#8E7BAF]">
-                RSVP 💌
+              <h2 className="text-5xl font-bold text-center mb-12 text-[#1F3A2E]"style={{
+        fontFamily: "'Great Vibes', cursive",
+      }}>
+                RSVP 
               </h2>
 
               <form onSubmit={sendEmail} className="space-y-6">
