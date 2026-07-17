@@ -487,12 +487,17 @@ shadow-lg
               <p className="text-black mb-4 text-center">
     Scan and share your favorite moments and all the memories with the happy couple
   </p>
+   <a
+    href="https://drive.google.com/drive/folders/1ywEIz9Nnw6GQWxOQTw3FKSTGLExfNK4o?usp=drive_link"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <img
       src="/images/google-drive-qr.png"
       alt="Venue QR Code"
       className="w-28 h-28 mx-auto rounded-lg hover:scale-105 transition"
     />
-  
+  </a>
 
  
 </div>
