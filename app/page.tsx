@@ -86,7 +86,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
 
   return (
   
-      <main className="relative min-h-screen overflow-hidden text-white">
+ <main className="relative min-h-screen overflow-hidden text-white">
 
 <div
   className="fixed inset-0 bg-cover bg-center"
@@ -473,11 +473,30 @@ shadow-lg
    </section>
         
 
+{/*photos */}
+          <section className="relative z-10 py-32 px-6">
 
+            <div className="max-w-3xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
+
+              <h2 className="text-5xl font-bold text-center mb-12 text-[#1F3A2E]"style={{
+        fontFamily: "'Great Vibes', 'cursive'",
+      }}>
+        Help Us Relive The Magic
+                
+              </h2>
+              <p className="text-black mb-4">
+    Scan and share your favorite moments and all the memories with the happy couple
+  </p>
+    <img
+      src="/images/google-drive-qr.jpeg"
+      alt="Venue QR Code"
+      className="w-28 h-28 mx-auto rounded-lg hover:scale-105 transition"
+    />
   
-  
 
-
+ 
+</div>
+</section>
           {/* RSVP */}
           <section className="relative z-10 py-32 px-6">
 
@@ -550,7 +569,7 @@ shadow-lg
                   type="submit"
                   className="w-full py-5 rounded-2xl
                   bg-[#8096ad]
-                  text-[#000000]
+                  text-[#8499a9]
                   text-lg font-bold
                   hover:scale-[1.02]
                   transition"
@@ -564,11 +583,12 @@ shadow-lg
 
           </section>
 
-        </motion.div>
+       
 
+      
+
+ </motion.div>
       )}
-
-   </main>
- 
-);
-}
+              
+                 </main> )}
+                 
