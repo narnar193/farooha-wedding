@@ -301,41 +301,59 @@ shadow-lg
 
             <div className="max-w-5xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
-              <h2 className="text-5xl font-bold text-center mb-16 text-[#8E7BAF]">
-                Wedding Details ✨
+              <h2 className="text-5xl font-bold text-center mb-16 text-[#1F3A2E] " style={{
+        fontFamily: "'Great Vibes', cursive",
+      }}>
+                Wedding Details 
               </h2>
 
               <div className="grid md:grid-cols-3 gap-8 text-center">
 
                 <div className="bg-white/40 rounded-3xl p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-[#8E7BAF]">
+                  <h3 className="text-2xl font-semibold mb-4 text-[#1F3A2E]">
                     Date
                   </h3>
 
-                  <p className="text-[#6F6187]">
+                  <p className="text-[#000000]">
                     September 4, 2026
                   </p>
                 </div>
 
                 <div className="bg-white/40 rounded-3xl p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-[#8E7BAF]">
+                  <h3 className="text-2xl font-semibold mb-4 text-[#1F3A2E]">
                     Time
                   </h3>
 
-                  <p className="text-[#6F6187]">
-                    3:00 PM
+                  <p className="text-[#00000]">
+                    4:00 PM
                   </p>
                 </div>
 
-                <div className="bg-white/40 rounded-3xl p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-[#8E7BAF]">
-                    Venue
-                  </h3>
+                <div className="bg-white/40 rounded-3xl p-8 text-center">
+  <h3 className="text-2xl font-semibold mb-4 text-[#1F3A2E]">
+    Venue
+  </h3>
 
-                  <p className="text-[#6F6187]">
-                    Casa Novel
-                  </p>
-                </div>
+  <p className="text-black mb-4">
+    Casa Novelle
+  </p>
+
+  <a
+    href="https://maps.app.goo.gl/Ydwa9ruBqbZgmhxH9?g_st=ic"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <img
+      src="/images/location-qr.jpeg"
+      alt="Venue QR Code"
+      className="w-28 h-28 mx-auto rounded-lg hover:scale-105 transition"
+    />
+  </a>
+
+  <p className="mt-3 text-sm text-[#1F3A2E]">
+    Scan to Open Location
+  </p>
+</div>
 
               </div>
 
