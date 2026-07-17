@@ -177,15 +177,17 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
         top-10
         left-1/2
         -translate-x-1/2
-        uppercase
-        tracking-[6px]
-        text-black
+        
+        text-center
+text-black
         text-xl
         md:text-2xl
-        font-dark
-        whitespace-nowrap
+       leading-snug
+        w-[90%]
+max-w-md
         z-20
       "
+     
     >
       Together With Our Families,
     </motion.p>
@@ -225,7 +227,7 @@ z-20
       transition={{ delay: 0.8, duration: 1 }}
       className="
 absolute
-top-[93%]
+top-[83%]
 left-1/2
 -translate-x-1/2
 text-center
