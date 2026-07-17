@@ -162,107 +162,111 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
         </div>
       )}
 
-     {/* HERO SECTION */}
-<section className="relative z-10 min-h-screen">
-  <div className="relative z-10 flex flex-col items-center justify-center text-center">
+    {/* HERO SECTION */}
+<section className="relative z-10 h-screen w-full">
 
-<motion.p
-  initial={{ opacity: 0, y: -20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ duration: 1 }}
+  <div className="relative w-full h-full">
+
+    {/* Top Text */}
+    <motion.p
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="
+        absolute
+        top-10
+        left-1/2
+        -translate-x-1/2
+        uppercase
+        tracking-[6px]
+        text-black
+        text-sm
+        md:text-base
+        font-light
+        whitespace-nowrap
+        z-20
+      "
+    >
+      Together With Our Families,
+    </motion.p>
+
+    {/* Names */}
+    <motion.h1
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.2 }}
+   className="
+absolute
+left-1/2
+top-[16%]
+-translate-x-1/2
+text-center
+leading-[0.82]
+text-[#1F3A2E]
+text-[80px]
+md:text-[140px]
+z-20
+"
+      style={{
+        fontFamily: "'Great Vibes', cursive",
+      }}
+    >
+      Omar
+      <br />
+      <span className="text-[56px] md:text-[90px]">&</span>
+      <br />
+      Farah
+    </motion.h1>
+
+    {/* Bottom Text */}
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.8, duration: 1 }}
+      className="
+absolute
+top-[73%]
+left-1/2
+-translate-x-1/2
+text-center
+text-black
+text-xl
+md:text-2xl
+leading-snug
+w-[90%]
+max-w-md
+z-20
+"
+    >
+      Would love for you to join us
+      <br />
+      on Our Big Day
+    </motion.p>
+
+
+
+   <div
   className="
     absolute
-    top-[9%]
     left-1/2
+    top-[60%]
     -translate-x-1/2
-    uppercase
-    tracking-[6px]
-    text-black
-    text-sm
-    md:text-base
-    font-light
-    whitespace-nowrap
-    z-20
+    -translate-y-1/2
+    z-50
   "
 >
-  Together With Our Families,
-</motion.p>
-
-   <motion.h1
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 1.2 }}
-  className="
-    absolute
-    top-[24%]
-    left-1/2
-    -translate-x-1/2
-    text-center
-    leading-[0.9]
-    text-[#1F3A2E]
-    text-[72px]
-    md:text-[140px]
-    drop-shadow-[0_4px_10px_rgba(255,255,255,0.2)]
-    z-20
-  "
-  style={{
-    fontFamily: "'Great Vibes', cursive",
-  }}
->
-  Omar
-  <br />
-  <span className="text-[56px] md:text-[90px]">&</span>
-  <br />
-  Farah
-</motion.h1>
-
-   <motion.p
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  transition={{ delay: 0.8, duration: 1 }}
-  className="
-    absolute
-    bottom-[6%]
-    left-1/2
-    -translate-x-1/2
-    text-center
-    text-black
-    text-xl
-    md:text-2xl
-    leading-snug
-    w-[90%]
-    max-w-md
-    z-20
-  "
->
-  Would love for you to join us
-  <br />
-  on Our Big Day
-</motion.p>
-
-   <div className="relative mt-16">
-
   <motion.button
     whileHover={{ scale: 1.08 }}
     whileTap={{ scale: 0.95 }}
-    onClick={() => {
-      setPlayingIntro(true);
-    }}
+    onClick={() => setPlayingIntro(true)}
     className="
-      absolute
-      left-1/2
-      top-1/2
-      -translate-x-1/2
-      -translate-y-1/2
       w-[170px]
       h-[170px]
       rounded-full
       bg-transparent
-      z-50
       cursor-pointer
     "
   />
-
 </div>
 
   </div>
