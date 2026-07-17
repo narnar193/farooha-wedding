@@ -186,6 +186,12 @@ text-black
         w-[90%]
 max-w-md
         z-20
+        bg-[#C0BBB3]/90
+backdrop-blur-sm
+px-6
+py-2
+rounded-full
+shadow-lg
       "
      
     >
@@ -238,6 +244,12 @@ leading-snug
 w-[90%]
 max-w-md
 z-20
+bg-[#C0BBB3]/90
+backdrop-blur-sm
+px-8
+py-4
+rounded-2xl
+shadow-lg
 "
     >
       Would love for you to join us
