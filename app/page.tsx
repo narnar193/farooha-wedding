@@ -163,71 +163,82 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
       )}
 
      {/* HERO SECTION */}
-<section
-  className="
-    relative
-    z-10
-    min-h-screen
-    flex
-    items-start
-    justify-center
-    pt-10
-    px-6
-  "
->
+<section className="relative z-10 min-h-screen">
   <div className="relative z-10 flex flex-col items-center justify-center text-center">
 
-    <motion.p
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
-      className="
-        mt-8
-        text-[#000000]
-        text-xl
-        tracking-widest
-        drop-shadow-md
-      "
-    >
-      Together With Our Families,
-    </motion.p>
+<motion.p
+  initial={{ opacity: 0, y: -20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 1 }}
+  className="
+    absolute
+    top-[9%]
+    left-1/2
+    -translate-x-1/2
+    uppercase
+    tracking-[6px]
+    text-black
+    text-sm
+    md:text-base
+    font-light
+    whitespace-nowrap
+    z-20
+  "
+>
+  Together With Our Families,
+</motion.p>
 
-    <motion.h1
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1.2 }}
-      className="
-        text-[70px]
-        md:text-[140px]
-        leading-[0.9]
-        text-[#4b4f20]
-        drop-shadow-[0_6px_20px_rgba(0,0,0,0.45)]
-      "
-      style={{
-        fontFamily: "'Great Vibes', cursive",
-      }}
-    >
-      Omar
-      <br />
-      <span className="text-[60px] md:text-[90px]">&</span>
-      <br />
-      Farah
-    </motion.h1>
+   <motion.h1
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1.2 }}
+  className="
+    absolute
+    top-[24%]
+    left-1/2
+    -translate-x-1/2
+    text-center
+    leading-[0.9]
+    text-[#1F3A2E]
+    text-[72px]
+    md:text-[140px]
+    drop-shadow-[0_4px_10px_rgba(255,255,255,0.2)]
+    z-20
+  "
+  style={{
+    fontFamily: "'Great Vibes', cursive",
+  }}
+>
+  Omar
+  <br />
+  <span className="text-[56px] md:text-[90px]">&</span>
+  <br />
+  Farah
+</motion.h1>
 
-    <motion.p
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.7 }}
-      className="
-        mt-8
-        text-[#000000]
-        text-xl
-        tracking-widest
-        drop-shadow-md
-      "
-    >
-      Would love for you to join us on Our Big Day
-    </motion.p>
+   <motion.p
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.8, duration: 1 }}
+  className="
+    absolute
+    bottom-[6%]
+    left-1/2
+    -translate-x-1/2
+    text-center
+    text-black
+    text-xl
+    md:text-2xl
+    leading-snug
+    w-[90%]
+    max-w-md
+    z-20
+  "
+>
+  Would love for you to join us
+  <br />
+  on Our Big Day
+</motion.p>
 
    <div className="relative mt-16">
 
