@@ -1,15 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
+
+
+
 export default function Home() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+const [playingIntro, setPlayingIntro] = useState(false);
+const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg");
 
   const [opened, setOpened] = useState(false);
-  const [showContent, setShowContent] = useState(false);
+ 
 
-  const weddingDate = new Date("2026-09-09T15:00:00").getTime();
+  const weddingDate = new Date("2026-09-04T15:00:00").getTime();
 
   const flowers = Array.from({ length: 20 });
 
@@ -78,19 +85,43 @@ export default function Home() {
   };
 
   return (
-    <main className="relative min-h-screen overflow-hidden text-white">
+  
+      <main className="relative min-h-screen overflow-hidden text-white">
 
-     {/* FLORAL BACKGROUND */}
 <div
   className="fixed inset-0 bg-cover bg-center"
   style={{
-    backgroundImage:
-      "url('/images/floral-bg.jpg')",
+    backgroundImage: `url(${backgroundImage})`,
   }}
 />
 
+{playingIntro && (
+  <video
+    ref={videoRef}
+    className="fixed inset-0 w-full h-full object-cover z-50"
+    src="/videos/window-intro.mp4"
+    autoPlay
+    muted
+    playsInline
+    onEnded={() => {
+      setPlayingIntro(false);
+      setBackgroundImage("/images/venue.jpg");
+      setOpened(true);
+
+      setTimeout(() => {
+        document
+          .getElementById("main-content")
+          ?.scrollIntoView({
+            behavior: "smooth",
+          });
+      }, 300);
+    }}
+  />
+)}
+
+
 {/* SOFT OVERLAY */}
-<div className="fixed inset-0 bg-white/35" />
+<div className="fixed inset-0 bg-black/10" />
 
       {/* SOFT GLOWS */}
       <div className="fixed top-0 left-0 w-[500px] h-[500px] bg-[#F8C8DC] rounded-full blur-[120px] opacity-20" />
@@ -131,81 +162,100 @@ export default function Home() {
         </div>
       )}
 
-      {/* HERO SECTION */}
-      <section
-        className="relative z-10 min-h-screen flex flex-col
-        items-center justify-center text-center px-6"
-      >
+     {/* HERO SECTION */}
+<section
+  className="
+    relative
+    z-10
+    min-h-screen
+    flex
+    items-start
+    justify-center
+    pt-1
+    px-6
+  "
+>
+  <div className="relative z-10 flex flex-col items-center justify-center text-center">
 
-        
+    <motion.p
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}
+      className="
+        mt-8
+        text-[#000000]
+        text-2xl
+        tracking-widest
+        drop-shadow-md
+      "
+    >
+      Together With Our Families,
+    </motion.p>
 
-        {/* CONTENT */}
-        <div className="relative z-10">
+    <motion.h1
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.2 }}
+      className="
+        text-[70px]
+        md:text-[140px]
+        leading-[0.9]
+        text-[#8E9548]
+        drop-shadow-[0_6px_20px_rgba(0,0,0,0.45)]
+      "
+      style={{
+        fontFamily: "'Great Vibes', cursive",
+      }}
+    >
+      Omar
+      <br />
+      <span className="text-[50px] md:text-[80px]">&</span>
+      <br />
+      Farah
+    </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
-            className="uppercase tracking-[8px]
-            text-[#8E7BAF] mb-8 text-sm"
-          >
-            Together With Our Families
-          </motion.p>
+    <motion.p
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay: 0.7 }}
+      className="
+        mt-8
+        text-[#000000]
+        text-2xl
+        tracking-widest
+        drop-shadow-md
+      "
+    >
+      Would love for you to join us on Our Big Day
+    </motion.p>
 
-          <motion.h1
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1.2 }}
-            className="text-[70px] md:text-[120px]
-            leading-none text-[#B497D6]
-            italic"
-            style={{
-              fontFamily: "cursive",
-            }}
-          >
-            Farooha & Shaboo7a
-          </motion.h1>
+   <div className="relative mt-16">
 
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.7 }}
-            className="mt-10 text-[#6F6187]
-            text-xl tracking-wide"
-          >
-            September 4, 2026 &nbsp;&nbsp; | &nbsp;&nbsp; 3:00 PM
-          </motion.p>
+  <motion.button
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={() => {
+      setPlayingIntro(true);
+    }}
+    className="
+      absolute
+      left-1/2
+      top-1/2
+      -translate-x-1/2
+      -translate-y-1/2
+      w-[170px]
+      h-[170px]
+      rounded-full
+      bg-transparent
+      z-50
+      cursor-pointer
+    "
+  />
 
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => {
-              setOpened(true);
-              setShowContent(true);
+</div>
 
-              setTimeout(() => {
-                document
-                  .getElementById("main-content")
-                  ?.scrollIntoView({
-                    behavior: "smooth",
-                  });
-              }, 500);
-            }}
-            className="mt-14 px-10 py-4
-            border border-[#C9B6E4]
-            rounded-full
-            text-[#9D84C2]
-            tracking-[3px]
-            uppercase text-sm
-            bg-white/50 backdrop-blur-md
-            hover:bg-white/70 transition"
-          >
-            RSVP Now
-          </motion.button>
-
-        </div>
-
-      </section>
+  </div>
+</section>
 
       {/* MAIN CONTENT */}
       {opened && (
@@ -254,7 +304,7 @@ export default function Home() {
                   </h3>
 
                   <p className="text-[#6F6187]">
-                    Kamel el 3adad Venue
+                    Casa Novel
                   </p>
                 </div>
 
@@ -321,100 +371,11 @@ export default function Home() {
 
           </section>
 
-          {/* GALLERY */}
-          <section className="relative z-10 py-32 px-6">
-
-            <div className="max-w-6xl mx-auto">
-
-              <h2 className="text-5xl font-bold text-center mb-20 text-[#8E7BAF]">
-                Our Memories 📸
-              </h2>
-
-           <div className="columns-2 md:columns-3 gap-6 space-y-6">
-
-  <motion.img
-    whileHover={{ scale: 1.03, rotate: 0 }}
-    src="/images/photo1.jpg"
-    className="w-full rounded-[30px]
-    rotate-[-4deg]
-    shadow-2xl mb-6"
-  />
-
-  <motion.img
-    whileHover={{ scale: 1.03, rotate: 0 }}
-    src="/images/photo2.jpg"
-    className="w-full rounded-[30px]
-    rotate-[3deg]
-    shadow-2xl mb-6"
-  />
-
-  <motion.img
-    whileHover={{ scale: 1.03, rotate: 0 }}
-    src="/images/photo3.jpg"
-    className="w-full rounded-[30px]
-    rotate-[-2deg]
-    shadow-2xl mb-6"
-  />
-
-  <motion.img
-    whileHover={{ scale: 1.03, rotate: 0 }}
-    src="/images/photo4.jpg"
-    className="w-full rounded-[30px]
-    rotate-[5deg]
-    shadow-2xl mb-6"
-  />
-
-  <motion.img
-    whileHover={{ scale: 1.03, rotate: 0 }}
-    src="/images/photo5.jpg"
-    className="w-full rounded-[30px]
-    rotate-[-5deg]
-    shadow-2xl mb-6"
-  />
-
-  <motion.img
-    whileHover={{ scale: 1.03, rotate: 0 }}
-    src="/images/photo6.jpg"
-    className="w-full rounded-[30px]
-    rotate-[2deg]
-    shadow-2xl mb-6"
-  />
-
-  <motion.img
-    whileHover={{ scale: 1.03, rotate: 0 }}
-    src="/images/photo7.jpg"
-    className="w-full rounded-[30px]
-    rotate-[-3deg]
-    shadow-2xl mb-6"
-  />
-<motion.img
-  whileHover={{ scale: 1.03, rotate: 0 }}
-  src="/images/photo8.jpg"
-  className="w-full rounded-[30px]
-  rotate-[4deg]
-  shadow-2xl mb-6"
-/>
-
-<motion.img
-  whileHover={{ scale: 1.03, rotate: 0 }}
-  src="/images/photo9.jpg"
-  className="w-full rounded-[30px]
-  rotate-[-4deg]
-  shadow-2xl mb-6"
-/>
-<motion.img
-  whileHover={{ scale: 1.03, rotate: 0 }}
-  src="/images/photo10.jpg"
-  className="w-full rounded-[30px]
-  rotate-[4deg]
-  shadow-2xl mb-6"
-/>
-</div>
-
+         
  
-            </div>
+         
 
-          </section>
+         
           {/* GIFT REGISTRY */}
 <section className="relative z-10 py-32 px-6">
 
@@ -596,6 +557,7 @@ export default function Home() {
 
       )}
 
-    </main>
-  );
+   </main>
+ 
+);
 }
