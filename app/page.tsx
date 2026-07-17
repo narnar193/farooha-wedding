@@ -479,16 +479,16 @@ shadow-lg
             <div className="max-w-3xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
               <h2 className="text-5xl font-bold text-center mb-12 text-[#1F3A2E]"style={{
-        fontFamily: "'Great Vibes', 'cursive'",
+        fontFamily: "'Great Vibes', cursive",
       }}>
         Help Us Relive The Magic
                 
               </h2>
-              <p className="text-black mb-4">
+              <p className="text-black mb-4 text-center">
     Scan and share your favorite moments and all the memories with the happy couple
   </p>
     <img
-      src="/images/google-drive-qr.jpeg"
+      src="/images/google-drive-qr.png"
       alt="Venue QR Code"
       className="w-28 h-28 mx-auto rounded-lg hover:scale-105 transition"
     />
@@ -503,7 +503,7 @@ shadow-lg
             <div className="max-w-3xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
               <h2 className="text-5xl font-bold text-center mb-12 text-[#1F3A2E]"style={{
-        fontFamily: "'Great Vibes'",
+        fontFamily: "'Great Vibes'"
       }}>
                 RSVP 
               </h2>
