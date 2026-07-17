@@ -206,7 +206,7 @@ shadow-lg
    className="
 absolute
 left-1/2
-top-[16%]
+top-[30%]
 -translate-x-1/2
 text-center
 leading-[0.82]
