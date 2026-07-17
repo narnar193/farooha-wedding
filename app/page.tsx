@@ -16,7 +16,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
   const [opened, setOpened] = useState(false);
  
 
-  const weddingDate = new Date("2026-09-04T15:00:00").getTime();
+  const weddingDate = new Date("2026-09-04T16:00:00").getTime();
 
   const flowers = Array.from({ length: 20 });
 
@@ -366,48 +366,50 @@ shadow-lg
 
             <div className="max-w-6xl mx-auto text-center">
 
-              <h2 className="text-5xl font-bold mb-16 text-[#8E7BAF]">
-                Countdown To Forever ⏳
+              <h2 className="text-5xl font-bold mb-16 text-[#1F3A2E]"style={{
+        fontFamily: "'Great Vibes', cursive",
+      }}>
+                Countdown To Forever 
               </h2>
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#B497D6]">
+                  <h3 className="text-5xl font-black text-[#1F3A2E]">
                     {timeLeft.days}
                   </h3>
 
-                  <p className="mt-4 text-[#6F6187]">
+                  <p className="mt-4 text-[#000000]">
                     Days
                   </p>
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#B497D6]">
+                  <h3 className="text-5xl font-black text-[#1F3A2E]">
                     {timeLeft.hours}
                   </h3>
 
-                  <p className="mt-4 text-[#6F6187]">
+                  <p className="mt-4 text-[#000000]">
                     Hours
                   </p>
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#B497D6]">
+                  <h3 className="text-5xl font-black text-[#1F3A2E]">
                     {timeLeft.minutes}
                   </h3>
 
-                  <p className="mt-4 text-[#6F6187]">
+                  <p className="mt-4 text-[#000000]">
                     Minutes
                   </p>
                 </div>
 
                 <div className="bg-white/30 border border-white/30 backdrop-blur-md rounded-[30px] p-10">
-                  <h3 className="text-5xl font-black text-[#B497D6]">
+                  <h3 className="text-5xl font-black text-[#1F3A2E]">
                     {timeLeft.seconds}
                   </h3>
 
-                  <p className="mt-4 text-[#6F6187]">
+                  <p className="mt-4 text-[#000000]">
                     Seconds
                   </p>
                 </div>
