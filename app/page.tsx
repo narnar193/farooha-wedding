@@ -171,7 +171,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     flex
     items-start
     justify-center
-    pt-1
+    pt-6
     px-6
   "
 >
