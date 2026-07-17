@@ -569,7 +569,7 @@ shadow-lg
                   type="submit"
                   className="w-full py-5 rounded-2xl
                   bg-[#8096ad]
-                  text-[#8499a9]
+                  text-[#ffffff]
                   text-lg font-bold
                   hover:scale-[1.02]
                   transition"
