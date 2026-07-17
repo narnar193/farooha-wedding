@@ -180,9 +180,9 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
         uppercase
         tracking-[6px]
         text-black
-        text-sm
-        md:text-base
-        font-light
+        text-xl
+        md:text-2xl
+        font-dark
         whitespace-nowrap
         z-20
       "
@@ -225,7 +225,7 @@ z-20
       transition={{ delay: 0.8, duration: 1 }}
       className="
 absolute
-top-[73%]
+top-[93%]
 left-1/2
 -translate-x-1/2
 text-center
