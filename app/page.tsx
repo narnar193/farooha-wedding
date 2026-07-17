@@ -184,7 +184,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
       className="
         mt-8
         text-[#000000]
-        text-2xl
+        text-xl
         tracking-widest
         drop-shadow-md
       "
@@ -200,7 +200,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
         text-[70px]
         md:text-[140px]
         leading-[0.9]
-        text-[#8E9548]
+        text-[#4b4f20]
         drop-shadow-[0_6px_20px_rgba(0,0,0,0.45)]
       "
       style={{
@@ -209,7 +209,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     >
       Omar
       <br />
-      <span className="text-[50px] md:text-[80px]">&</span>
+      <span className="text-[60px] md:text-[90px]">&</span>
       <br />
       Farah
     </motion.h1>
@@ -221,7 +221,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
       className="
         mt-8
         text-[#000000]
-        text-2xl
+        text-xl
         tracking-widest
         drop-shadow-md
       "
