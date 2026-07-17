@@ -324,7 +324,7 @@ shadow-lg
                     Time
                   </h3>
 
-                  <p className="text-[#00000]">
+                  <p className="text-[#000000]">
                     4:00 PM
                   </p>
                 </div>
