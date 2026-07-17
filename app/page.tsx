@@ -454,14 +454,14 @@ shadow-lg
 
   <motion.img
     whileHover={{ scale: 1.05 }}
-    src="/images/girl dress code.png"
+    src="/images/girl-dress-code.png"
     alt="Ladies Dress Code"
     className="w-[420px] rounded-3xl shadow-xl"
   />
 
   <motion.img
     whileHover={{ scale: 1.05 }}
-    src="/images/boy dress code.png"
+    src="/images/boy-dress-code.png"
     alt="Gentlemen Dress Code"
     className="w-[420px] rounded-3xl shadow-xl"
   />
@@ -484,7 +484,7 @@ shadow-lg
             <div className="max-w-3xl mx-auto bg-white/30 border border-white/30 backdrop-blur-md rounded-[40px] p-10 shadow-xl">
 
               <h2 className="text-5xl font-bold text-center mb-12 text-[#1F3A2E]"style={{
-        fontFamily: "'Great Vibes', cursive",
+        fontFamily: "'Great Vibes'",
       }}>
                 RSVP 
               </h2>
@@ -549,13 +549,13 @@ shadow-lg
                 <button
                   type="submit"
                   className="w-full py-5 rounded-2xl
-                  bg-[#E7D5F5]
-                  text-[#8E7BAF]
+                  bg-[#8096ad]
+                  text-[#000000]
                   text-lg font-bold
                   hover:scale-[1.02]
                   transition"
                 >
-                  Send RSVP ✨
+                  Send RSVP 
                 </button>
 
               </form>
