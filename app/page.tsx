@@ -298,14 +298,20 @@ shadow-lg
     duration: 1,
     delay: 1,
   }}
-  onClick={() => {
+onClick={() => {
+  setOpened(true);
+
+  setBackgroundImage("/images/venue.png");
+
+  setTimeout(() => {
     detailsRef.current?.scrollIntoView({
       behavior: "smooth",
     });
-  }}
+  }, 300);
+}}
   className="
     absolute
-    top-[92%]
+    top-[72%]
     left-1/2
     -translate-x-1/2
     px-10
@@ -368,7 +374,7 @@ shadow-lg
       {/* MAIN CONTENT */}
       
 
-        <motion.div
+  <motion.div
   ref={detailsRef}
   initial={{ opacity: 0, y: 80 }}
   animate={{
@@ -380,13 +386,7 @@ shadow-lg
     relative
     text-center
     min-h-screen
-    bg-cover
-    bg-center
-    bg-fixed
   "
-  style={{
-    backgroundImage: "url('/images/venue.png')",
-  }}
 ><div className="absolute inset-0 bg-white/25 backdrop-blur-[2px]" />
 
 <div className="relative z-10">
