@@ -112,15 +112,9 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     autoPlay
     playsInline
     muted
-onEnded={(e) => {
-  const video = e.currentTarget;
-
-  video.pause();
-  video.currentTime = video.duration - 0.05;
-
-  console.log("VIDEO ENDED");
-
+onEnded={() => {
   setShowHeroText(true);
+  setPlayingIntro(false);
 }}
   />
 )}
