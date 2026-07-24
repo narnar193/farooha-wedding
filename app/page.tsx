@@ -103,14 +103,15 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     className="fixed inset-0 w-full h-full object-cover z-50"
     src="/videos/mainvid.mp4"
     autoPlay
-    muted
     playsInline
- onEnded={() => {
-  setPlayingIntro(false);
-  setBackgroundImage("/images/venue.jpg");
-  setShowHeroText(true);
-  setOpened(true);
-}}
+    muted
+    onEnded={(e) => {
+      const video = e.currentTarget;
+      video.pause();
+      video.currentTime = video.duration - 0.05;
+
+      setShowHeroText(true);
+    }}
   />
 )}
 
@@ -293,9 +294,14 @@ shadow-lg
     whileHover={{ scale: 1.08 }}
     whileTap={{ scale: 0.95 }}
     onClick={() => {
-  setPlayingIntro(true);
-
+  if (!playingIntro && !showHeroText) {
+    setPlayingIntro(true);
+  } else if (showHeroText) {
+    setOpened(true);
+  }
 }}
+
+
     className="
       w-[170px]
       h-[170px]
