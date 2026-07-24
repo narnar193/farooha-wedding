@@ -14,6 +14,7 @@ const [playingIntro, setPlayingIntro] = useState(false);
 const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg");
 
   const [opened, setOpened] = useState(false);
+  const [showHeroText, setShowHeroText] = useState(false);
  
 
   const weddingDate = new Date("2026-09-04T16:00:00").getTime();
@@ -105,7 +106,9 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     playsInline
     onEnded={() => {
       setPlayingIntro(false);
+      setShowHeroText(false);
       setBackgroundImage("/images/venue.jpg");
+
       setOpened(true);
 
       setTimeout(() => {
@@ -163,6 +166,8 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
       )}
 
     {/* HERO SECTION */}
+    {showHeroText && (
+  
 <section className="relative z-10 h-screen w-full">
 
   <div className="relative w-full h-full">
@@ -272,7 +277,13 @@ shadow-lg
   <motion.button
     whileHover={{ scale: 1.08 }}
     whileTap={{ scale: 0.95 }}
-    onClick={() => setPlayingIntro(true)}
+    onClick={() => {
+  setPlayingIntro(true);
+
+  setTimeout(() => {
+    setShowHeroText(true);
+  }, 1000); // يظهر بعد ثانية من بداية الفيديو
+}}
     className="
       w-[170px]
       h-[170px]
@@ -285,7 +296,7 @@ shadow-lg
 
   </div>
 </section>
-
+)}
       {/* MAIN CONTENT */}
       {opened && (
 
