@@ -88,63 +88,17 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
   return (
   
  <main className="relative min-h-screen overflow-hidden text-white">
-
-{/* Venue Background */}
-<img
-  src="/images/venue.jpg"
-  className="fixed inset-0 w-full h-full object-cover z-0"
+<div
+  className="fixed inset-0 bg-cover bg-center"
+  style={{
+    backgroundImage: `url(${backgroundImage})`,
+  }}
 />
-
-{/* Text */}
-<div className="fixed inset-0 z-10 pointer-events-none">
-  <motion.p
-    initial={false}
-    animate={{
-      opacity: showHeroText ? 1 : 0,
-      y: showHeroText ? 0 : 60,
-    }}
-    transition={{ duration: 1 }}
-    className="absolute top-10 left-1/2 -translate-x-1/2 text-center"
-  >
-    Together With Our Families
-  </motion.p>
-
-  <motion.h1
-    initial={false}
-    animate={{
-      opacity: showHeroText ? 1 : 0,
-      y: showHeroText ? 0 : 100,
-      scale: showHeroText ? 1 : 0.95,
-    }}
-    transition={{ duration: 1.4 }}
-    className="absolute left-1/2 top-[20%] -translate-x-1/2 text-center"
-    style={{ fontFamily: "'Great Vibes', cursive" }}
-  >
-    Omar
-    <br />
-    <span>&</span>
-    <br />
-    Farah
-  </motion.h1>
-
-  <motion.p
-    initial={false}
-    animate={{
-      opacity: showHeroText ? 1 : 0,
-      y: showHeroText ? 0 : 60,
-    }}
-    transition={{ delay: 0.5, duration: 1 }}
-    className="absolute top-[83%] left-1/2 -translate-x-1/2 text-center"
-  >
-    Would love for you to join us
-  </motion.p>
-</div>
-
-{/* Window Frame */}
 <img
   src="/images/window-frame.png"
-  className="fixed inset-0 w-full h-full object-cover z-20 pointer-events-none"
+  className="fixed inset-0 w-full h-full object-cover z-30 pointer-events-none"
 />
+
 
 {playingIntro && (
   <video
@@ -156,6 +110,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     playsInline
    onEnded={() => {
   setPlayingIntro(false);
+  setBackgroundImage("/images/venue.jpg");
   setShowHeroText(true);
   setOpened(true);
 }}
@@ -204,6 +159,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
 
         </div>
       )}
+      
 
     {/* HERO SECTION */}
     
