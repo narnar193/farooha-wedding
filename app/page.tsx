@@ -390,7 +390,7 @@ onClick={() => {
     text-center
     min-h-screen
   "
-><div className="absolute inset-0 bg-black/10" />
+>
 
 <div className="relative z-10">
           {/* WEDDING DETAILS */}
