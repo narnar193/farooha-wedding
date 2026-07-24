@@ -99,7 +99,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
   <video
     ref={videoRef}
     className="fixed inset-0 w-full h-full object-cover z-50"
-    src="/videos/window-intro.mp4"
+    src="/videos/mainvid.mp4"
     autoPlay
     muted
     playsInline
