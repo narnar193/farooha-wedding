@@ -94,10 +94,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     backgroundImage: `url(${backgroundImage})`,
   }}
 />
-<img
-  src="/images/window-frame.png"
-  className="fixed inset-0 w-full h-full object-cover z-30 pointer-events-none"
-/>
+
 
 
 {playingIntro && (
@@ -108,7 +105,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     autoPlay
     muted
     playsInline
-   onEnded={() => {
+ onEnded={() => {
   setPlayingIntro(false);
   setBackgroundImage("/images/venue.jpg");
   setShowHeroText(true);
@@ -166,7 +163,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
   
 <section className="relative z-10 h-screen w-full">
 
-  <div className="relative w-full h-full">
+  <div className="relative min-h-screen flex items-center justify-center px-6 z-40">
 
   
     {/* Top Text */}
@@ -316,11 +313,15 @@ shadow-lg
       {opened && (
 
         <motion.div
-          id="main-content"
-          initial={{ opacity: 0, y: 100 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.5 }}
-        >
+  initial={{ opacity: 0, scale: 0.95 }}
+  animate={
+    showHeroText
+      ? { opacity: 1, scale: 1 }
+      : { opacity: 0, scale: 0.95 }
+  }
+  transition={{ duration: 1 }}
+  className="text-center"
+>
 
           {/* WEDDING DETAILS */}
           <section className="relative z-10 py-32 px-6">
