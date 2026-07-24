@@ -304,6 +304,9 @@ onClick={() => {
   setBackgroundImage("/images/venue.png");
 
   setTimeout(() => {
+    setPlayingIntro(false);
+  }, 500);
+  setTimeout(() => {
     detailsRef.current?.scrollIntoView({
       behavior: "smooth",
     });
