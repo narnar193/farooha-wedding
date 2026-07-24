@@ -106,15 +106,21 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
 
 {playingIntro && (
   <video
-    ref={videoRef}
-    className="fixed inset-0 w-full h-full object-cover z-50"
+  ref={videoRef}
+  className={`fixed inset-0 w-full h-full object-cover ${
+    showHeroText ? "z-10" : "z-50"
+  }`}
     src="/videos/mainvid.mp4"
     autoPlay
     playsInline
     muted
-onEnded={() => {
+onEnded={(e) => {
+  const video = e.currentTarget;
+
+  video.pause();
+  video.currentTime = video.duration - 0.05;
+
   setShowHeroText(true);
-  setPlayingIntro(false);
 }}
   />
 )}
