@@ -9,6 +9,7 @@ import emailjs from "@emailjs/browser";
 
 export default function Home() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const detailsRef = useRef<HTMLDivElement>(null);
 
 const [playingIntro, setPlayingIntro] = useState(false);
 const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg");
@@ -34,7 +35,13 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     guests: "",
     message: "",
   });
+  useEffect(() => {
+  document.body.style.overflow = opened ? "auto" : "hidden";
 
+  return () => {
+    document.body.style.overflow = "auto";
+  };
+}, [opened]);
   useEffect(() => {
     const timer = setInterval(() => {
       const now = new Date().getTime();
@@ -87,7 +94,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
 
   return (
   
- <main className="relative min-h-screen overflow-hidden text-white">
+ <main className="relative min-h-screen text-white">
 <div
   className="fixed inset-0 bg-cover bg-center"
   style={{
@@ -294,12 +301,18 @@ shadow-lg
     whileHover={{ scale: 1.08 }}
     whileTap={{ scale: 0.95 }}
     onClick={() => {
-  if (!playingIntro && !showHeroText) {
-    setPlayingIntro(true);
-  } else if (showHeroText) {
-    setOpened(true);
-  }
-}}
+      if (!playingIntro && !showHeroText) {
+        setPlayingIntro(true);
+      } else if (showHeroText) {
+        setOpened(true);
+
+        setTimeout(() => {
+          detailsRef.current?.scrollIntoView({
+            behavior: "smooth",
+          });
+        }, 300);
+      }
+    }}
 
 
     className="
@@ -316,15 +329,15 @@ shadow-lg
 </section>
 
       {/* MAIN CONTENT */}
-      {opened && (
+      
 
         <motion.div
+          ref={detailsRef}        
   initial={{ opacity: 0, scale: 0.95 }}
-  animate={
-    showHeroText
-      ? { opacity: 1, scale: 1 }
-      : { opacity: 0, scale: 0.95 }
-  }
+  animate={{
+  opacity: opened ? 1 : 0,
+  scale: opened ? 1 : 0.95,
+}}
   transition={{ duration: 1 }}
   className="text-center"
 >
@@ -626,7 +639,7 @@ shadow-lg
       
 
  </motion.div>
-      )}
+      
               
                  </main> )}
                  
