@@ -166,12 +166,13 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
       )}
 
     {/* HERO SECTION */}
-    {showHeroText && (
+    
   
 <section className="relative z-10 h-screen w-full">
 
   <div className="relative w-full h-full">
-
+{showHeroText && (
+  <>
     {/* Top Text */}
     <motion.p
       initial={{ opacity: 0, y: -20 }}
@@ -262,7 +263,8 @@ shadow-lg
       on Our Big Day
     </motion.p>
 
-
+  </>
+)}
 
    <div
   className="
@@ -296,7 +298,7 @@ shadow-lg
 
   </div>
 </section>
-)}
+
       {/* MAIN CONTENT */}
       {opened && (
 
