@@ -104,21 +104,12 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     autoPlay
     muted
     playsInline
-    onEnded={() => {
-      setPlayingIntro(false);
-      setShowHeroText(false);
-      setBackgroundImage("/images/venue.jpg");
-
-      setOpened(true);
-
-      setTimeout(() => {
-        document
-          .getElementById("main-content")
-          ?.scrollIntoView({
-            behavior: "smooth",
-          });
-      }, 300);
-    }}
+   onEnded={() => {
+  setPlayingIntro(false);
+  setBackgroundImage("/images/venue.jpg");
+  setShowHeroText(true);
+  setOpened(true);
+}}
   />
 )}
 
@@ -206,8 +197,12 @@ shadow-lg
 
     {/* Names */}
     <motion.h1
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
+  initial={{ opacity: 0, scale: 0.9 }}
+  animate={
+    showHeroText
+      ? { opacity: 1, scale: 1 }
+      : { opacity: 0, scale: 0.9 }
+  }
       transition={{ duration: 1.2 }}
    className="
 absolute
@@ -282,9 +277,6 @@ shadow-lg
     onClick={() => {
   setPlayingIntro(true);
 
-  setTimeout(() => {
-    setShowHeroText(true);
-  }, 1000); // يظهر بعد ثانية من بداية الفيديو
 }}
     className="
       w-[170px]
