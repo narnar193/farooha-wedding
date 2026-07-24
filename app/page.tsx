@@ -112,13 +112,16 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
     autoPlay
     playsInline
     muted
-    onEnded={(e) => {
-      const video = e.currentTarget;
-      video.pause();
-      video.currentTime = video.duration - 0.05;
+onEnded={(e) => {
+  const video = e.currentTarget;
 
-      setShowHeroText(true);
-    }}
+  video.pause();
+  video.currentTime = video.duration - 0.05;
+
+  console.log("VIDEO ENDED");
+
+  setShowHeroText(true);
+}}
   />
 )}
 
@@ -210,7 +213,7 @@ shadow-lg
     >
       Together With Our Families,
     </motion.p>
-
+  
     {/* Names */}
     <motion.h1
 initial={false}
