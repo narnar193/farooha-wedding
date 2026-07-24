@@ -164,11 +164,39 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
   <div className="relative w-full h-full">
 {showHeroText && (
   <>
+  <motion.div
+  initial={{
+    opacity: 0,
+    y: 150,
+  }}
+  animate={
+    showHeroText
+      ? {
+          opacity: 1,
+          y: 0,
+        }
+      : {
+          opacity: 0,
+          y: 150,
+        }
+  }
+  transition={{
+    duration: 1.8,
+    ease: [0.22, 1, 0.36, 1],
+  }}
+>
     {/* Top Text */}
     <motion.p
-      initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}
+     initial={{ opacity: 0, y: 80 }}
+animate={
+  showHeroText
+    ? { opacity: 1, y: 0 }
+    : { opacity: 0, y: 80 }
+}
+transition={{
+  duration: 1.2,
+  delay: 0.2,
+}}
       className="
         absolute
         top-10
@@ -197,13 +225,30 @@ shadow-lg
 
     {/* Names */}
     <motion.h1
-  initial={{ opacity: 0, scale: 0.9 }}
-  animate={
-    showHeroText
-      ? { opacity: 1, scale: 1 }
-      : { opacity: 0, scale: 0.9 }
-  }
-      transition={{ duration: 1.2 }}
+  initial={{
+  opacity: 0,
+  y: 120,
+  scale: 0.95,
+}}
+
+animate={
+  showHeroText
+    ? {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+      }
+    : {
+        opacity: 0,
+        y: 120,
+        scale: 0.95,
+      }
+}
+
+transition={{
+  duration: 1.5,
+  ease: [0.22, 1, 0.36, 1], // حركة ناعمة
+}}
    className="
 absolute
 left-1/2
@@ -229,9 +274,16 @@ z-20
 
     {/* Bottom Text */}
     <motion.p
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.8, duration: 1 }}
+   initial={{ opacity: 0, y: 80 }}
+animate={
+  showHeroText
+    ? { opacity: 1, y: 0 }
+    : { opacity: 0, y: 80 }
+}
+transition={{
+  duration: 1.2,
+  delay: 0.6,
+}}
       className="
 absolute
 top-[83%]
@@ -257,7 +309,7 @@ shadow-lg
       <br />
       on Our Big Day
     </motion.p>
-
+</motion.div>
   </>
 )}
 
