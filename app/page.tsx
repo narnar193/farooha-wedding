@@ -164,27 +164,7 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
   <div className="relative w-full h-full">
 {showHeroText && (
   <>
-  <motion.div
-  initial={{
-    opacity: 0,
-    y: 150,
-  }}
-  animate={
-    showHeroText
-      ? {
-          opacity: 1,
-          y: 0,
-        }
-      : {
-          opacity: 0,
-          y: 150,
-        }
-  }
-  transition={{
-    duration: 1.8,
-    ease: [0.22, 1, 0.36, 1],
-  }}
->
+  
     {/* Top Text */}
     <motion.p
      initial={{ opacity: 0, y: 80 }}
@@ -309,7 +289,7 @@ shadow-lg
       <br />
       on Our Big Day
     </motion.p>
-</motion.div>
+
   </>
 )}
 
