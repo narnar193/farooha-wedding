@@ -162,17 +162,15 @@ const [backgroundImage, setBackgroundImage] = useState("/images/window-cover.jpg
 <section className="relative z-10 h-screen w-full">
 
   <div className="relative w-full h-full">
-{showHeroText && (
-  <>
+
   
     {/* Top Text */}
     <motion.p
-     initial={{ opacity: 0, y: 80 }}
-animate={
-  showHeroText
-    ? { opacity: 1, y: 0 }
-    : { opacity: 0, y: 80 }
-}
+    initial={false}
+animate={{
+  opacity: showHeroText ? 1 : 0,
+  y: showHeroText ? 0 : 80,
+}}
 transition={{
   duration: 1.2,
   delay: 0.2,
@@ -205,25 +203,13 @@ shadow-lg
 
     {/* Names */}
     <motion.h1
-  initial={{
-  opacity: 0,
-  y: 120,
-  scale: 0.95,
-}}
+initial={false}
 
-animate={
-  showHeroText
-    ? {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-      }
-    : {
-        opacity: 0,
-        y: 120,
-        scale: 0.95,
-      }
-}
+animate={{
+  opacity: showHeroText ? 1 : 0,
+  y: showHeroText ? 0 : 120,
+  scale: showHeroText ? 1 : 0.95,
+}}
 
 transition={{
   duration: 1.5,
@@ -254,12 +240,11 @@ z-20
 
     {/* Bottom Text */}
     <motion.p
-   initial={{ opacity: 0, y: 80 }}
-animate={
-  showHeroText
-    ? { opacity: 1, y: 0 }
-    : { opacity: 0, y: 80 }
-}
+   initial={false}
+animate={{
+  opacity: showHeroText ? 1 : 0,
+  y: showHeroText ? 0 : 80,
+}}
 transition={{
   duration: 1.2,
   delay: 0.6,
@@ -290,8 +275,7 @@ shadow-lg
       on Our Big Day
     </motion.p>
 
-  </>
-)}
+
 
    <div
   className="
